@@ -58,28 +58,28 @@ export const ProductTable = ({ products, onRowClick }) => {
             { title: "" },
             {
               title: (
-                <Text variant="headingLg" as="h4">
+                <Text variant="headingMd" as="h4">
                   Product
                 </Text>
               ),
             },
             {
               title: (
-                <Text variant="headingLg" as="h4">
+                <Text variant="headingMd" as="h4">
                   Category
                 </Text>
               ),
             },
             {
               title: (
-                <Text variant="headingLg" as="h4">
+                <Text variant="headingMd" as="h4">
                   Rating
                 </Text>
               ),
             },
             {
               title: (
-                <Text variant="headingLg" as="h4">
+                <Text variant="headingMd" as="h4">
                   Price
                 </Text>
               ),

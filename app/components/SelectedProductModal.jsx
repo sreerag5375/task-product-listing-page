@@ -26,10 +26,10 @@ export const SelectedProductModal = ({ active, handleClose, product }) => {
                 }}
               />
 
-              <Text variant="headingXl" as="h4">
+              <Text variant="headingLg" as="h4">
                 {product?.title}
               </Text>
-              <Text variant="headingLg" as="h4" fontWeight="regular">
+              <Text variant="headingMd" as="h4" fontWeight="regular">
                 {product?.description}
               </Text>
 

@@ -10,14 +10,14 @@ export const Header = () => {
       </Text>
       <div className="nav-links">
         <InlineGrid columns={3} alignItems="center">
-          <Text variant="headingLg" as="h6">
+          <Text variant="headingMd" as="h6">
             Export
           </Text>
-          <Text variant="headingLg" as="h6">
+          <Text variant="headingMd" as="h6">
             Import
           </Text>
           <Button size="large" id="add-product">
-            <Text variant="headingLg">Add Product</Text>
+            <Text variant="headingMd">Add Product</Text>
           </Button>
         </InlineGrid>
       </div>

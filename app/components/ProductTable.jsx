@@ -1,4 +1,4 @@
-import { Card, IndexTable, Text } from "@shopify/polaris";
+import { Card, IndexTable, Page, Text, Thumbnail } from "@shopify/polaris";
 import React from "react";
 
 export const ProductTable = ({ products, onRowClick }) => {
@@ -22,25 +22,21 @@ export const ProductTable = ({ products, onRowClick }) => {
             }
           >
             <IndexTable.Cell>
-              <img
-                src={image}
-                alt={title}
-                style={{
-                  width: "100px",
-                  height: "120px",
-                  objectFit: "contain",
-                }}
-              />
+              <Thumbnail source={image} alt={title} size="medium" />
             </IndexTable.Cell>
             <IndexTable.Cell>
-              <Text variant="bodyXl" fontWeight="bold" as="span">
-                {title}
+              <Text variant="bodyLg" fontWeight="medium" as="span">
+                {title.length > 20 ? `${title.substring(0, 50)}...` : title}
               </Text>
             </IndexTable.Cell>
-            <IndexTable.Cell>{category}</IndexTable.Cell>
-            <IndexTable.Cell>{rating.rate}⭐</IndexTable.Cell>
             <IndexTable.Cell>
-              <Text as="span" numeric fontWeight="semibold">
+              <Text variant="bodyLg">{category}</Text>
+            </IndexTable.Cell>
+            <IndexTable.Cell>
+              <Text variant="bodyLg">{rating.rate}⭐</Text>
+            </IndexTable.Cell>
+            <IndexTable.Cell>
+              <Text variant="bodyLg" fontWeight="semibold">
                 ${price}
               </Text>
             </IndexTable.Cell>

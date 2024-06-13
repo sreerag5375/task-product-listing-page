@@ -3,14 +3,13 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 42px 64px 0;
 }
 
 #add-product {
@@ -20,15 +19,16 @@ body {
 }
 
 .product-table {
-  
   padding: 24px 36px;
   /* font-size: 18px; */
 }
 
 .selectedProduct {
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+  display: grid;
+  gap: 20px;
+  
+}
+
+#add-product-btn {
+  background-color: green;
 }

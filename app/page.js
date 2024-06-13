@@ -4,6 +4,15 @@ import "@shopify/polaris/build/esm/styles.css";
 import { ProductTable } from "./components/ProductTable";
 import { SelectedProductModal } from "./components/SelectedProductModal";
 import { Header } from "./components/Header";
+import {
+  AppProvider,
+  Button,
+  ButtonGroup,
+  Card,
+  Layout,
+  Page,
+  Text,
+} from "@shopify/polaris";
 
 const Home = () => {
   const API_URL = "https://fakestoreapi.com/products";
@@ -38,10 +47,14 @@ const Home = () => {
   };
 
   return (
-    <>
-      <div>
-        <Header />
-        <ProductTable products={products} onRowClick={handleRowClick} />
+    <AppProvider>
+      <Page>
+        <Layout>
+          <Layout.Section>
+            <Header/>
+            <ProductTable products={products} onRowClick={handleRowClick} />
+          </Layout.Section>
+        </Layout>
         {selectedProduct && (
           <SelectedProductModal
             active={modalActive}
@@ -49,8 +62,8 @@ const Home = () => {
             product={selectedProduct}
           />
         )}
-      </div>
-    </>
+      </Page>
+    </AppProvider>
   );
 };
 
